@@ -4,6 +4,8 @@ import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
 import {
   container,
+  container2,
+  rowC,
   intro,
   callOut,
   callToAction,
@@ -22,24 +24,35 @@ export const query = graphql`
 export default function IndexPage({ data }) {
   return (
     <Layout>
-      <div className={container}>
-        <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
-        <p className={callOut}>
-          It's a proof-of-concept in a box, with 10k products and 30k variants
-          to help you get to proof-of-concept as soon as right now.
+      <div className={rowC}>
+        <div className={container}>
+          <h1 className={intro}>Hello in our website Morocco Saffron !</h1>
+          <p className={callOut}>
+            This site is about the wealth of the kingdom namely the saffron which grows with a <b>unique quality</b> and its oils that <b>cannot be found anywhere else </b>such as argan oil as well as other products to be discovered cultivated with love. for your taste buds
         </p>
-        <p className={callToAction}>
-          Hook it up to your own Shopify store data and start customizing in
-          minutes by deploying it to Gatsby Cloud for free. Grab your Shopify
-          store credentials and
+          <p className={callToAction}>
+            Discover our blog to learn more about Moroccan craftsmanship, our role as mediator between cooperatives and our public overseas
+          <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
+              <img
+                src="https://www.gatsbyjs.com/deploynow.png"
+                alt="Deploy to Gatsby Cloud"
+                className={deployButton}
+              />
+            </a>
+          </p>
+        </div>
+        <div className={container2}>
+
           <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
             <img
-              src="https://www.gatsbyjs.com/deploynow.png"
+              src="https://t4.ftcdn.net/jpg/04/20/72/73/360_F_420727304_ca6ckjpUgPdNUGgnGN1bKC6AyYHuqGVI.jpg"
               alt="Deploy to Gatsby Cloud"
+              height='30%'
               className={deployButton}
             />
           </a>
-        </p>
+
+        </div>
       </div>
       <ProductListing products={data.shopifyCollection.products} />
     </Layout>

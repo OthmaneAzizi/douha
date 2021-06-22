@@ -3,7 +3,22 @@
   padding-right: var(--size-gutter-raw);
   padding-top: var(--space-lg);
   padding-bottom: var(--space-3xl);
-  max-width: 76ch;
+  max-width: 90ch;
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.container2 {
+  padding-left: 5ch;
+  padding-right: var(--size-gutter-raw);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-3xl);
+  height: "100px";
+  max-width: 90ch;
 }
 
 .intro {
@@ -16,14 +31,13 @@
 .callOut {
   padding-bottom: var(--space-lg);
   font-size: var(--text-display);
-  font-weight: var(--bold);
   line-height: var(--dense);
   line-height: var(--dense);
   letter-spacing: var(--tight);
   color: var(--text-color-secondary);
 }
 
-.callOut > strong {
+.callOut>strong {
   text-decoration: underline;
 }
 
